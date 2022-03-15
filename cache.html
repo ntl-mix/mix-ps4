@@ -9,50 +9,62 @@ history.replaceState(null,null,'index.html');var histlength=history.length;histo
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
-<h1 id="msgs">PS4 9.00 FW Host v3.0 by GamerHack</h1>
+<h1 id="msgs">PS4 9.00 JB by Mix</h1>
 <hr>
 <br>
-<h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn btn-blank"> GoldHEN v2.2 </button>
-<button class="btn btn-blank"> Bin Loader </button>
+<div id="main-section">
+<h1 style="font-size:18px;color:red;">Загрузчик</h1>
+<button class="btn btn-two" onclick=load_goldhen22()><span> GoldHEN v2.2 </span></button>
+<br><br>
+<hr>
 <br>
-<h1 style="font-size:18px;text-align:center;">Payloads</h1>
-<button class="btn btn-blank"> Game-Dumper </button>
-<button class="btn btn-blank"> Update-Dumper </button>
-<button class="btn btn-blank"> SGU-Dumper </button>
-<button class="btn btn-blank"> MGU-Dumper </button>
+<h1 style="font-size:18px;text-align:center;">Моды</h1>
+<button class="btn btn-one" onclick=load_arabicGuy100()> GTA-5 v1.00 </button>
+<button class="btn btn-one" onclick=load_arabicGuy127()> GTA-5 v1.27 </button>
+<button class="btn btn-one" onclick=load_arabicGuy132()> GTA-5 v1.32 </button>
+<button class="btn btn-one" onclick=load_arabicGuy133()> GTA-5 v1.33 </button>
+<button class="btn btn-one" onclick=load_GTAMenu()> GTAMenu </button>
+<button class="btn btn-one" onclick=load_Expulsion()> Expulsion-V4.0-1.38 </button>
+<button class="btn btn-one" onclick=load_Native()> GTA-V-Native-Caller </button>
+<hr>
 <br>
-<button class="btn btn-blank"> ToDex </button>
-<button class="btn btn-blank"> Web-Activator </button>
-<button class="btn btn-blank"> FTP </button>
-<button class="btn btn-blank"> App2USB </button>
-<button class="btn btn-blank"> DB Backup </button>
-<button class="btn btn-blank"> DB Restore </button>
+<button class="atuin-btn-7" onclick=load_mods() style="margin-left: 69px"> Разное </button>
+</div>
+<div id="mods-section">
+<h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
+<button class="btn btn-one" onclick=load_binloader()> Bin Loader </button>
 <br>
-<button class="btn btn-blank"> Enable Updates </button>
-<button class="btn btn-blank"> Disable Updates </button>
-<button class="btn btn-blank"> History Blocker </button>
-<button class="btn btn-blank"> Kernel Dumper </button>
-<button class="btn btn-blank"> Module Dumper </button>
-<button class="btn btn-blank"> PS4 Debug </button>
+<button class="btn btn-one" onclick=load_Gdumper()> Game-Dumper </button>
+<button class="btn btn-one" onclick=load_Udumper()> Update-Dumper </button>
+<button class="btn btn-one" onclick=load_app2usb()> App2USB </button>
+<button class="btn btn-one" onclick=load_SGUdumper()> SGU-Dumper </button>
+<button class="btn btn-one" onclick=load_MGUdumper()> MGU-Dumper </button>
 <br>
-<button class="btn btn-blank"> Disable ASLR </button>
-<button class="btn btn-blank"> Exit IDU </button>
-<button class="btn btn-blank"> RIF Renamer </button>
-<button class="btn btn-blank"> Permanent UART </button>
-<button class="btn btn-blank"> WebRTE </button>
-<button class="btn btn-blank"> PS4 Trainer Web </button>
+<a href="webactivator.html"><button class="atuin-btn-7"> Web-Activator </button></a>
+<button class="btn btn-one" onclick=load_webrte()> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="atuin-btn-7"> PS4 Trainer Web </button></a>
 <br>
-<button class="btn btn-blank"> Linux 1GB </button>
-<button class="btn btn-blank"> Linux 2GB </button>
-<button class="btn btn-blank"> Linux 3GB </button>
-<button class="btn btn-blank"> Linux 4GB </button>
-<button class="btn btn-blank"> Linux 5GB </button>
+<button class="btn btn-one" onclick=load_todex()> ToDex </button>
+<button class="btn btn-one" onclick=load_ftp()> FTP </button>
+<button class="btn btn-one" onclick=load_dbackup()> DB Backup </button>
+<button class="btn btn-one" onclick=load_dbrestore()> DB Restore </button>
 <br>
-<button class="btn btn-blank"> Games-Mods (Online) </button>
-<button class="btn btn-blank"> Orbis-Toolbox </button>
-<button class="btn btn-blank"> Fan Threshold </button>
+<button class="btn btn-one" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn btn-one" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn btn-one" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn btn-one" onclick=load_moduleDump()> Module Dumper </button>
+<button class="btn btn-one" onclick=load_ps4debug()> PS4 Debug </button>
 <br>
-<h1 style="margin-top: 40px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color:#f31414; margin-left: 15px;">@sleirsgoevy</a><a style="color:white; margin-left: 15px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color:#f31414; margin-left: 15px;">@SpecterDev</a><a style="color:white; margin-left: 15px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color:#f31414; margin-left: 15px;">@Znullptr</a><a style="color:white; margin-left: 15px;">And Many More Developers ...</a></h1>
+<button class="btn btn-one" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn btn-one" onclick=load_linux2gb()> Linux 2GB </button>
+<button class="btn btn-one" onclick=load_linux3gb()> Linux 3GB </button>
+<button class="btn btn-one" onclick=load_linux4gb()> Linux 4GB </button>
+<button class="btn btn-one" onclick=load_linux5gb()> Linux 5GB </button>
+<br>
+<button class="btn btn-toolbox" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>°C
+<br>
+<button class="atuin-btn-7" onclick=back() style="margin-bottom: 241px"> Return </button>
+</div>
 </body>
 </html>
