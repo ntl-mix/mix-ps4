@@ -1,4 +1,4 @@
-html, body {background-image: url('/main/png.png');background-repeat: no-repeat;background-color: #24272b;color: white;text-align: center;margin: 0px;overflow: hidden;}
+html, body {background-image: url('Png.png');background-repeat: no-repeat;background-color: #24272b;color: white;text-align: center;margin: 0px;overflow: hidden;}
 h1 {text-shadow: 0.1em 0.1em 0.2em black;text-align: center;color: white;font-family: cursive;font-size: unset;}
 #main-section {
 text-align: center;
