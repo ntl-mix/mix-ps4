@@ -1,56 +1,76 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest"><head>
-<title>PS4 9.00 FW Host v2.5 by GamerHack</title>
+<html><head>
+<title>PS4 9.00 JB by Mix</title>
 <link rel="stylesheet" href="style.css">
 <script src="int64.js"></script>
 <script src="rop.js"></script>
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body>
+<body onload="poc()">
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
-<h1 id="msgs">PS4 9.00 FW Host v2.5 by GamerHack</h1>
+<h1 id="msgs">PS4 9.00 JB by Mix</h1>
 <hr>
 <br>
-<h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn" onclick=load_goldhen212()> GoldHEN v2.1.2 </button>
-<button class="btn" onclick=load_binloader()> Bin Loader </button>
+<div id="main-section">
+<h1 style="font-size:18px;color:red;">Загрузчик</h1>
+<button class="btn btn-two" onclick=load_goldhen22()><span> GoldHEN v2.2 </span></button>
+<br><br>
+<hr>
 <br>
-<h1 style="font-size:18px;text-align:center;">Payloads</h1>
-<button class="btn" onclick=load_todex()> ToDex </button>
-<button class="btn" onclick=load_dumper()> App-Dumper </button>
-<button class="btn" onclick=load_ftp()> FTP </button>
-<button class="btn" onclick=load_app2usb()> App2USB </button>
-<button class="btn" onclick=load_dbackup()> DB Backup </button>
-<button class="btn" onclick=load_dbrestore()> DB Restore </button>
+<h1 style="font-size:18px;text-align:center;">Моды</h1>
+<button class="btn btn-one" onclick=load_arabicGuy100()> GTA-5 v1.00 </button>
+<button class="btn btn-one" onclick=load_arabicGuy127()> GTA-5 v1.27 </button>
+<button class="btn btn-one" onclick=load_arabicGuy132()> GTA-5 v1.32 </button>
+<button class="btn btn-one" onclick=load_arabicGuy133()> GTA-5 v1.33 </button>
+<button class="btn btn-one" onclick=load_GTAMenu()> GTAMenu </button>
+<button class="btn btn-one" onclick=load_Expulsion()> Expulsion-V4.0-1.38 </button>
+<button class="btn btn-one" onclick=load_Native()> GTA-V-Native-Caller </button>
+<hr>
 <br>
-<button class="btn" onclick=load_enablebUpdates()> Enable Updates </button>
-<button class="btn" onclick=load_disableUpdates()> Disable Updates </button>
-<button class="btn" onclick=load_historyBlocker()> History Blocker </button>
-<button class="btn" onclick=load_kernelDump()> Kernel Dumper </button>
-<button class="btn" onclick=load_moduleDump()> Module Dumper </button>
-<button class="btn" onclick=load_ps4debug()> PS4 Debug </button>
-<br>
-<button class="btn" onclick=load_disbAslr()> Disable ASLR </button>
-<button class="btn" onclick=load_exitidu()> Exit IDU </button>
-<button class="btn" onclick=load_rifRen()> RIF Renamer </button>
-<button class="btn" onclick=load_permUart()> Permanent UART </button>
-<button class="btn" onclick=load_webrte()> WebRTE </button>
-<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web"> PS4 Trainer Web </button></a>
-<br>
-<a href="webactivator.html"><button class="btn" style="margin-left: 77px;"> Web-Activator </button></a>
-<button class="btn btn-toolbox" onclick=load_toolbox()> Orbis-Toolbox </button>
-<button class="btn" onclick=load_fanthreshold() style="margin-right: 8px;"> Fan Threshold </button><select id="tempC"></select>&#176;C
-<br>
+<button class="atuin-btn-7" onclick=load_mods() style="margin-left: 69px"> Разное </button>
+</div>
+<div id="mods-section">
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
-<a href="online.html"><button class="btn btn-web" style="width: 468px;"> Click Here to Load Page </button></a>
+<button class="btn btn-one" onclick=load_binloader()> Bin Loader </button>
 <br>
-<h1 style="margin-top: 55px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color:#f31414; margin-left: 15px;">@sleirsgoevy</a><a style="color:white; margin-left: 15px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color:#f31414; margin-left: 15px;">@SpecterDev</a><a style="color:white; margin-left: 15px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color:#f31414; margin-left: 15px;">@Znullptr</a><a style="color:white; margin-left: 15px;">And Many More Developers ...</a></h1>
+<button class="btn btn-one" onclick=load_Gdumper()> Game-Dumper </button>
+<button class="btn btn-one" onclick=load_Udumper()> Update-Dumper </button>
+<button class="btn btn-one" onclick=load_app2usb()> App2USB </button>
+<button class="btn btn-one" onclick=load_SGUdumper()> SGU-Dumper </button>
+<button class="btn btn-one" onclick=load_MGUdumper()> MGU-Dumper </button>
+<br>
+<a href="webactivator.html"><button class="atuin-btn-7"> Web-Activator </button></a>
+<button class="btn btn-one" onclick=load_webrte()> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="atuin-btn-7"> PS4 Trainer Web </button></a>
+<br>
+<button class="btn btn-one" onclick=load_todex()> ToDex </button>
+<button class="btn btn-one" onclick=load_ftp()> FTP </button>
+<button class="btn btn-one" onclick=load_dbackup()> DB Backup </button>
+<button class="btn btn-one" onclick=load_dbrestore()> DB Restore </button>
+<br>
+<button class="btn btn-one" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn btn-one" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn btn-one" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn btn-one" onclick=load_moduleDump()> Module Dumper </button>
+<button class="btn btn-one" onclick=load_ps4debug()> PS4 Debug </button>
+<br>
+<button class="btn btn-one" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn btn-one" onclick=load_linux2gb()> Linux 2GB </button>
+<button class="btn btn-one" onclick=load_linux3gb()> Linux 3GB </button>
+<button class="btn btn-one" onclick=load_linux4gb()> Linux 4GB </button>
+<button class="btn btn-one" onclick=load_linux5gb()> Linux 5GB </button>
+<br>
+<button class="btn btn-toolbox" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>°C
+<br>
+<button class="atuin-btn-7" onclick=back() style="margin-bottom: 241px"> Return </button>
+</div>
+<br>
 <script>
-for(var i=40; i<=79; i++){
+for(var i=40; i<=75; i=i+5){
     var select = document.getElementById("tempC");
     var option = document.createElement("OPTION");
 	select.options.add(option);
@@ -60,150 +80,461 @@ for(var i=40; i<=79; i++){
 tempC.value=60;
 </script>
 <script>
-function load_goldhen212(){
-var script = document.createElement('script');script.src = "goldhen_2.1.2.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading GoldHEN v2.1.2... Please Wait !!!";
-run_jb = "payload";
-setTimeout(poc,1500);
+function load_mods(){
+document.getElementById("mods-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+
+function back(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("mods-section").style.display = "none";
+}
+
+function allset(){
+msgs.innerHTML = ЗагруженMSG
+}
+
+function load_poc(){
+var xhr = new XMLHttpRequest();
+xhr.responseType = "arraybuffer";
+xhr.open("GET",PLfile,true);
+xhr.send();
+xhr.onreadystatechange=function(){
+if (xhr.readyState == 4){
+  var tmp0 = new Uint8Array(xhr.response.byteLength);
+  tmp0.set(new Uint8Array(xhr.response), 0);
+  var payload = new Uint32Array(tmp0);
+  loadPL = payload;
+  launch_payload();
+  }
+};
+}
+
+function launch_payload(){
+	if (exec_loader == "payload"){
+        var payload_buffer = chain.syscall(477, 0, loadPL.length, 7, 0x1002, -1, 0);
+        var buf = new Uint8Array(1);
+        var buf_addr = p.leakval(buf);
+        var old_buf = p.read8(buf_addr.add32(16));
+        var old_sz = p.read4(buf_addr.add32(24));
+        p.write8(buf_addr.add32(16), payload_buffer);
+        p.write4(buf_addr.add32(24), loadPL.length);
+        for(var i = 0; i < loadPL.length; i++) buf[i] = loadPL[i];
+        p.write8(buf_addr.add32(16), old_buf);
+        p.write4(buf_addr.add32(24), old_sz);
+        var pthread = p.malloc(0x10);
+        chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_buffer, 0);
+		allset();
+    }
+else if (exec_loader == "binloader"){
+    var payload_buffer = chain.syscall(477, 0x0, 0x300000, 0x7, 0x1000, 0xFFFFFFFF, 0);
+    var payload_loader = p.malloc32(0x1000);
+    
+    var loader_writer = payload_loader.backing;
+    loader_writer[0] = 0x56415741;
+    loader_writer[1] = 0x83485541;
+    loader_writer[2] = 0x894818EC;
+    loader_writer[3] = 0xC748243C;
+    loader_writer[4] = 0x10082444;
+    loader_writer[5] = 0x483C2302;
+    loader_writer[6] = 0x102444C7;
+    loader_writer[7] = 0x00000000;
+    loader_writer[8] = 0x000002BF;
+    loader_writer[9] = 0x0001BE00;
+    loader_writer[10] = 0xD2310000;
+    loader_writer[11] = 0x00009CE8;
+    loader_writer[12] = 0xC7894100;
+    loader_writer[13] = 0x8D48C789;
+    loader_writer[14] = 0xBA082474;
+    loader_writer[15] = 0x00000010;
+    loader_writer[16] = 0x000095E8;
+    loader_writer[17] = 0xFF894400;
+    loader_writer[18] = 0x000001BE;
+    loader_writer[19] = 0x0095E800;
+    loader_writer[20] = 0x89440000;
+    loader_writer[21] = 0x31F631FF;
+    loader_writer[22] = 0x0062E8D2;
+    loader_writer[23] = 0x89410000;
+    loader_writer[24] = 0x2C8B4CC6;
+    loader_writer[25] = 0x45C64124;
+    loader_writer[26] = 0x05EBC300;
+    loader_writer[27] = 0x01499848;
+    loader_writer[28] = 0xF78944C5;
+    loader_writer[29] = 0xBAEE894C;
+    loader_writer[30] = 0x00001000;
+    loader_writer[31] = 0x000025E8;
+    loader_writer[32] = 0x7FC08500;
+    loader_writer[33] = 0xFF8944E7;
+    loader_writer[34] = 0x000026E8;
+    loader_writer[35] = 0xF7894400;
+    loader_writer[36] = 0x00001EE8;
+    loader_writer[37] = 0x2414FF00;
+    loader_writer[38] = 0x18C48348;
+    loader_writer[39] = 0x5E415D41;
+    loader_writer[40] = 0x31485F41;
+    loader_writer[41] = 0xC748C3C0;
+    loader_writer[42] = 0x000003C0;
+    loader_writer[43] = 0xCA894900;
+    loader_writer[44] = 0x48C3050F;
+    loader_writer[45] = 0x0006C0C7;
+    loader_writer[46] = 0x89490000;
+    loader_writer[47] = 0xC3050FCA;
+    loader_writer[48] = 0x1EC0C748;
+    loader_writer[49] = 0x49000000;
+    loader_writer[50] = 0x050FCA89;
+    loader_writer[51] = 0xC0C748C3;
+    loader_writer[52] = 0x00000061;
+    loader_writer[53] = 0x0FCA8949;
+    loader_writer[54] = 0xC748C305;
+    loader_writer[55] = 0x000068C0;
+    loader_writer[56] = 0xCA894900;
+    loader_writer[57] = 0x48C3050F;
+    loader_writer[58] = 0x006AC0C7;
+    loader_writer[59] = 0x89490000;
+    loader_writer[60] = 0xC3050FCA;
+    chain.syscall(74, payload_loader, 0x4000, (0x1 | 0x2 | 0x4));
+
+    var pthread = p.malloc(0x10);
+    //
+    {
+        chain.fcall(window.syscalls[203], payload_buffer, 0x300000);
+        chain.fcall(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_loader, payload_buffer);
+    }
+    chain.run();
+	alert("Ожидаем загрузчик... Отправьте его, используя IP-адрес PS4 и порт 9020");
+	allset();
+	}
+}
+
+function loadScript(path)
+{
+    var xhr = new XMLHttpRequest(path);
+    xhr.open("GET", path, false);
+    xhr.send('');
+    return xhr.responseText;
+}
+
+function load_linux1gb(){
+msgs.innerHTML="Linux Loader 1GB Запущен ...";
+eval.call(window, loadScript('netcat.js')
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript('linux1gb.js')
++loadScript('mira.js')
++loadScript('relocator.js'));
+}
+
+function load_linux2gb(){
+msgs.innerHTML="Linux Loader 2GB Запущен ...";
+eval.call(window, loadScript('netcat.js')
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript('linux1gb.js')
++loadScript('mira.js')
++loadScript('relocator.js'));
+}
+
+function load_linux3gb(){
+msgs.innerHTML="Linux Loader 3GB Запущен ...";
+eval.call(window, loadScript('netcat.js')
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript('linux1gb.js')
++loadScript('mira.js')
++loadScript('relocator.js'));
+}
+
+function load_linux4gb(){
+msgs.innerHTML="Linux Loader 4GB Запущен ...";
+eval.call(window, loadScript('netcat.js')
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript('linux1gb.js')
++loadScript('mira.js')
++loadScript('relocator.js'));
+}
+
+function load_linux5gb(){
+msgs.innerHTML="Linux Loader 5GB Запущен ...";
+eval.call(window, loadScript('netcat.js')
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript('linux1gb.js')
++loadScript('mira.js')
++loadScript('relocator.js'));
+}
+
+function load_goldhen22(){
+ЗагруженMSG = "GoldHEN v2.2 Загружен ...";
+PLfile = "goldhen_2.2.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_binloader(){
-msgs.innerHTML="Launching Bin Loader... Please Wait !!!";
-run_jb = "binloader";
-setTimeout(poc,1500);
+ЗагруженMSG = "Bin Loader Запущен ...";
+exec_loader = "binloader";
+launch_payload();
+}
+
+function load_Gdumper(){
+ЗагруженMSG = "Game-Dumper Загружен ...";
+PLfile = "dumperG.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_Udumper(){
+ЗагруженMSG = "Update-Dumper Загружен ...";
+PLfile = "dumperU.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_SGUdumper(){
+ЗагруженMSG = "Separate Game and Update Dumper Загружен ...";
+PLfile = "dumperSGU.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_MGUdumper(){
+ЗагруженMSG = "Merged Game and Update Dumper Загружен ...";
+PLfile = "dumperMGU.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_todex(){
-var script = document.createElement('script');script.src = "todex.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading ToDex... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
-}
-
-function load_dumper(){
-var script = document.createElement('script');script.src = "dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "ToDex Загружен ...";
+PLfile = "todex.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_ftp(){
-var script = document.createElement('script');script.src = "ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading FTP... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "FTP Загружен ..."
+PLfile = "ftp.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_app2usb(){
-var script = document.createElement('script');script.src = "app2usb.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading App2USB... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "App2USB Загружен ..."
+PLfile = "app2usb.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_dbackup(){
-var script = document.createElement('script');script.src = "backup.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading DB Backup... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "DB Backup Загружен ..."
+PLfile = "backup.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_dbrestore(){
-var script = document.createElement('script');script.src = "restore.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading DB Restore... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "DB Restore Загружен ..."
+PLfile = "restore.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_enablebUpdates(){
-var script = document.createElement('script');script.src = "enable-updates.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Enable Updates... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Enable Updates Загружен ..."
+PLfile = "restore.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_disableUpdates(){
-var script = document.createElement('script');script.src = "disable-updates.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Disable Updates... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Disable Updates Загружен ..."
+PLfile = "disable-updates.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_historyBlocker(){
-var script = document.createElement('script');script.src = "history-blocker.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading History Blocker... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "History Blocker Загружен ..."
+PLfile = "history-blocker.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_kernelDump(){
-var script = document.createElement('script');script.src = "kernel-dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Kernel Dumper... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Kernel Dumper Загружен ..."
+PLfile = "kernel-dumper.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_moduleDump(){
-var script = document.createElement('script');script.src = "module-dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Module Dumper... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Module Dumper Загружен ..."
+PLfile = "module-dumper.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_ps4debug(){
-var script = document.createElement('script');script.src = "ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading PS4 Debug... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "PS4 Debug Загружен ..."
+PLfile = "ps4debug.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_disbAslr(){
-var script = document.createElement('script');script.src = "disable-aslr.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Disable ASLR... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Disable ASLR Загружен ..."
+PLfile = "disable-aslr.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_exitidu(){
-var script = document.createElement('script');script.src = "exit-idu.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Exit IDU... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Exit IDU Загружен ..."
+PLfile = "exit-idu.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_rifRen(){
-var script = document.createElement('script');script.src = "rif-renamer.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading RIF Renamer... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "RIF Renamer Загружен ..."
+PLfile = "rif-renamer.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_permUart(){
-var script = document.createElement('script');script.src = "permanent-uart.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Permanent UART... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Permanent UART Загружен ..."
+PLfile = "permanent-uart.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_webrte(){
-var script = document.createElement('script');script.src = "webrte.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading WebRTE... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "WebRTE Загружен ..."
+PLfile = "webrte.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_toolbox(){
-var script = document.createElement('script');script.src = "Orbis-Toolbox-900.js";document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Orbis-Toolbox... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG = "Orbis-Toolbox Загружен ..."
+PLfile = "Orbis-Toolbox-900.bin";
+exec_loader = "payload";
+load_poc();
 }
 
 function load_fanthreshold(){
-var script = document.createElement('script');script.src = "fan-threshold.js";localStorage.setItem('fanthreshold', tempC.value);document.getElementsByTagName('head')[0].appendChild(script);
-msgs.innerHTML="Loading Fan Threshold... Please Wait !!!"
-run_jb = "payload";
-setTimeout(poc,1500);
+ЗагруженMSG="Fan Threshold Загружен ..."
+PLfile = "fan-threshold"+tempC.value+".bin";
+exec_loader = "payload";
+load_poc();
 }
+
+function load_arabicGuy100(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "GTA-5 v1.00 Загружен ..."
+PLfile = "arabic-guy100.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_arabicGuy127(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "GTA-5 v1.27 Загружен ..."
+PLfile = "arabic-guy127.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_arabicGuy132(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "GTA-5 v1.32 Загружен ..."
+PLfile = "arabic-guy132.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_arabicGuy133(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "GTA-5 v1.33 Загружен ..."
+PLfile = "arabic-guy133.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_GTAMenu(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "GTAMenu Загружен ..."
+PLfile = "GTAMenu.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_Native(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "Native Загружен ..."
+PLfile = "Native.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_Expulsion(){
+msgs.innerHTML="Загрузка... Пожалуйста Подождите";
+ЗагруженMSG = "Expulsion Загружен ..."
+PLfile = "Expulsion.bin";
+exec_loader = "payload";
+load_poc();
+}
+
 </script>
+<style>
+.sliding-button {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: black;
+  backgrou!nd: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.sliding-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+</style>
 </body>
 </html>
